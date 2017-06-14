@@ -14,7 +14,7 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::any('test', 'Test\TestController@test');
+Route::any('test', 'Test\TestController@import');
 //    Route::any('login', 'LoginController@login');
 //    Route::any('check', 'LoginController@check');
 Route::group(['middleware'=>['web']],function (){
