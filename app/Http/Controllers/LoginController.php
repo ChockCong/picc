@@ -60,6 +60,9 @@ class LoginController extends Controller{
             if ($d == '总经理') {
                 return redirect()->action('Pz\ZjlController@main');
             }
+            if ($d == '销售部经理') {
+                return redirect()->action('Pz\XsbjlController@main');
+            }
 
         } else {
             echo "<script>alert('账户或者密码失败，登陆失败');history.go(-1);</script>";

@@ -158,13 +158,6 @@ class JydwController extends Controller {
         }
     }
     public function info(Request $request){
-        $user=$request->session()->get('user');
-        if($user->Dep!="经营单位"){
-            echo "<script>" .
-                "alert('请重新登录！');".
-                "top.location.reload();".
-                "</script>";
-        }else
         return view('Pz.jydw.info');
     }
 

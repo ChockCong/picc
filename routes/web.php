@@ -47,6 +47,7 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('jydwjlsrejected','Pz\JydwjlsController@rejected');
     Route::any('jydwjlsrejectedetails/{order}','Pz\JydwjlsController@rejectedtails');
     Route::any('jydwjlsalterrejected','Pz\JydwjlsController@alterrejected');
+
     //销售部综合岗
     Route::any('xsbmain','Pz\XsbController@main');
     Route::any('xsbsearchx','Pz\XsbController@searchx');
@@ -59,6 +60,20 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('xsbrejected','Pz\XsbController@rejected');
     Route::any('xsbrejectedetails/{order}','Pz\XsbController@rejectedtails');
     Route::any('xsbalterrejected','Pz\XsbController@alterrejected');
+
+    //销售部经理
+    Route::any('xsbjlmain','Pz\XsbjlController@main');
+    Route::any('xsbjlsearchx','Pz\XsbjlController@searchx');
+    Route::any('xsbjlsearchy','Pz\XsbjlController@searchy');
+    Route::any('xsbjlconsearch','Pz\XsbjlController@consearch');
+    Route::any('xsbjlconsearched','Pz\XsbjlController@consearched');
+    Route::any('xsbjldetailx/{order}','Pz\XsbjlController@detailx');
+    Route::any('xsbjldetaily/{order}','Pz\XsbjlController@detaily');
+    Route::any('xsbjlpass','Pz\XsbjlController@pass');
+    Route::any('xsbjlrejected','Pz\XsbjlController@rejected');
+    Route::any('xsbjlrejectedetails/{order}','Pz\XsbjlController@rejectedtails');
+    Route::any('xsbjlalterrejected','Pz\XsbjlController@alterrejected');
+
     //车险部经理
     Route::any('cxbjlmain','Pz\CxbjlController@main');
     Route::any('cxbjlsearchx','Pz\CxbjlController@searchx');
@@ -85,8 +100,6 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('cwzxzrpass','Pz\CwzxzrController@pass');
     Route::any('cwzxzralterrejected','Pz\CwzxzrController@alterrejected');
 
-
-
     //分管副总经理
     Route::any('fgfzjlmain','Pz\FgfzjlController@main');
     Route::any('fgfzjlsearchx','Pz\FgfzjlController@searchx');
@@ -108,4 +121,6 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('zjlconsearched','Pz\ZjlController@consearched');
     Route::any('zjldetaily/{order}','Pz\ZjlController@detaily');
     Route::any('zjlpass','Pz\ZjlController@pass');
+    //奖励佣金查询
+    //Route::any('jlyjcx','Pz\ZjlController@pass');
 });
