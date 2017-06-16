@@ -86,7 +86,7 @@
                 <option value ="">请选择驳回部门</option>
                 <option value ="经营单位经理岗">经营单位经理岗</option>
             </select>
-            <input type="submit" name="pass" value="驳回">
+            <input type="submit" name="pass" value="返回">
             <input type="submit" name="pass" value="通过">
             <input type="submit" name="pass" value="不通过">
         </form>
