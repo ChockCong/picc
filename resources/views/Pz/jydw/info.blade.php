@@ -44,26 +44,27 @@ $i=Session::get('user');
     <div class="panel-body" style="font-size:110%">
         <table class="table table-striped table-responsive table-hover">
             <tbody>
-            <tr>
-                <td>账号</td>
-                <td>{{$i->Account}}</td>
-            </tr>
-            <tr>
-                <td>密码</td>
-                <td>{{$i->Password}}</td>
-            </tr>
+            {{--<tr>--}}
+                {{--<td>账号</td>--}}
+                {{--<td>{{$i->Account}}</td>--}}
+            {{--</tr>--}}
+            {{--<tr>--}}
+                {{--<td>密码</td>--}}
+                {{--<td>{{$i->Password}}</td>--}}
+            {{--</tr>--}}
             <tr>
                 <td>姓名</td>
                 <td>{{$i->Name}}</td>
             </tr>
             <tr>
+                <td>机构单位</td>
+                <td>{{$i->Dep}}</td>
+            </tr>
+            <tr>
                 <td>公司名称</td>
                 <td>{{$i->Com}}</td>
             </tr>
-            <tr>
-                <td>公司</td>
-                <td>{{$i->Com}}</td>
-            </tr>
+
             </tbody>
         </table>
         </div>

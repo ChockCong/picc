@@ -130,7 +130,7 @@ $Order=getnum($i->Com,$Order);
         </tbody>
     </table>
     <input type="submit" name="" value="提交">
-    <input type="reset" value="重置">
+    {{--<input type="reset" value="重置">--}}
 </form>
     </div>
 </div>

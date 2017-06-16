@@ -77,21 +77,21 @@ $week=get_week($time1);
                         <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>
                         <a href="{{url('jydwjlssearchy')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增已审批</span></a> </li>
                     <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />驳回修改</div>
-                        <a href="{{url('jydwjlsrejected')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">驳回修改</span></a> </li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />意见修改</div>
+                        <a href="{{url('jydwjlsrejected')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">意见修改</span></a> </li>
                 </ul>
             </div>
-            <div class="sBox">
-                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">特殊流程</span></div>
-                <ul class="navContent" style="display:block">
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>
-                        <a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊未审批</span></a> </li>
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>
-                        <a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊已审批</span></a> </li>
-                </ul>
-            </div>
+            {{--<div class="sBox">--}}
+                {{--<div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">特殊流程</span></div>--}}
+                {{--<ul class="navContent" style="display:block">--}}
+                    {{--<li>--}}
+                        {{--<div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>--}}
+                        {{--<a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊未审批</span></a> </li>--}}
+                    {{--<li>--}}
+                        {{--<div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>--}}
+                        {{--<a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊已审批</span></a> </li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
         </div>
     </div>
 
@@ -100,29 +100,18 @@ $week=get_week($time1);
             <div class="info-center">
                 <!---title----->
                 <div class="info-title">
-                    {{--<div class="pull-left">--}}
-                    {{--<h4><strong>{{$i->Name}}</strong></h4>--}}
-                    {{--<p>欢迎登录管理系统！</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="time-title pull-right">--}}
-                    {{--<div class="year-month pull-left">--}}
-                    {{--<p>{{$week}}</p>--}}
-                    {{--<p><span>{{$time1}}</p>--}}
-                    {{--</div>--}}
-                    {{--<div class="hour-minute pull-right">--}}
-                    {{--<strong>{{$time2}}</strong>--}}
-                    {{--</div>--}}
+
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <!----content-list---->
+
             <div class="container-fluid">
                 <div class="info-center">
                     <div class="clearfix">
                     </div>
                     <div class="table-margin" style="height: 500px">
 
-                        <!--<table class="table table-bordered table-header">-->
+
                         <iframe name="Center" src="{{url('logo')}}" style="border: 0;overflow-y: hidden" width="100%" height="600px">
 
                         </iframe>

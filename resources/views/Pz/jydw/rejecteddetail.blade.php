@@ -21,7 +21,7 @@
     </script>
 </head>
 <div class="panel panel-default" style="">
-    <div class="panel-heading">申报表单</div>
+    <div class="panel-heading">修改表单</div>
     <div class="panel-body" style="font-size:110%">
         <form method="post" action="{{ url('alterject') }}" role="form" enctype="multipart/form-data">
             <input type= "hidden"   name="_token" value="{{ csrf_token() }}">
@@ -106,8 +106,8 @@
                 </tr>
                 </tbody>
             </table>
-            <input type="submit" name="" value="修改">
-            <input type="reset" value="重置">
+            <input type="submit" name="" value="提交修改">
+            {{--<input type="reset" value="重置">--}}
         </form>
     </div>
 </div>
