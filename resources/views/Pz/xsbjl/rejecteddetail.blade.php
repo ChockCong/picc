@@ -21,7 +21,7 @@
     </script>
 </head>
 <div class="panel panel-default" style="">
-    <div class="panel-heading">驳回表单</div>
+    <div class="panel-heading">意见修改表单</div>
     <div class="panel-body" style="font-size:110%">
         <form method="post" action="{{url('xsbjlalterrejected')}}" role="form" enctype="multipart/form-data">
             <input type= "hidden"   name="_token" value="{{ csrf_token() }}">
@@ -102,13 +102,13 @@
                     </td>
                 </tr>
                 <tr>
-                    <td colspan="4">(必填)经营单位经理岗签字意见</td>
+                    <td colspan="4">(必填)销售部经理签字意见</td>
                 </tr>
                 <tr><td colspan="4"><textarea style="resize: none"   rows="6%" cols="100%" name="Advice"></textarea></td></tr>
                 </tbody>
             </table>
 
-            返回上级：<input type="text" readonly name="rejectcom" value="{{$row->Reject7}}">
+            提交上级：<input type="text" readonly name="rejectcom" value="{{$row->Reject7}}">
             <input type="submit" name="pass" value="提交">
             <input type="submit" name="pass" value="不通过" style="float: right">
         </form>

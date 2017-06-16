@@ -83,7 +83,7 @@
                 </tbody>
             </table>
             <select name="select">
-                <option value ="">请选择驳回部门</option>
+                <option value ="">请选择返回部门</option>
                 <option value ="经营单位经理岗">经营单位经理岗</option>
             </select>
             <input type="submit" name="pass" value="返回">
