@@ -87,16 +87,22 @@
                         销售部综合岗：{{$row->Advice2}}
                     </td>
                 </tr>
+                <tr style="text-align: left">
+                    <td colspan="4">
+                        销售部经理：{{$row->Advice7}}
+                    </td>
+                </tr>
                 <tr>
-                    <td colspan="4">车险部经理签字意见（必填）</td>
+                    <td colspan="4">签字意见（必填）</td>
                 </tr>
                 <tr><td colspan="4"><textarea style="resize: none"  rows="6%" cols="100%" name="Advice"></textarea></td></tr>
                 </tbody>
             </table>
             <select name="select">
-                <option value ="">请选择驳回部门</option>
+                <option value ="">请选择返回部门</option>
                 <option value ="经营单位经理岗">经营单位经理岗</option>
                 <option value ="销售部综合岗">销售部综合岗</option>
+                <option value ="销售部综合岗">销售部经理</option>
             </select>
             <input type="submit" name="pass" value="返回">
             <input type="submit" name="pass" value="通过">

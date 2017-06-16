@@ -68,18 +68,15 @@ class  Cxbjl extends Model{
         }
     }
     //未审核
-    public static function searchx($com){
+    public static function searchx(){
         $row = DB::table('main')
-            ->where('Order1','like',$com.'%')
             ->where('Pass3','=','1')
             ->get();
         return $row;
     }
     //已审核
-    public static function searchy($com){
+    public static function searchy(){
         $row = DB::table('main')
-            ->where('Order1','like',$com.'%')
-//            ->where('Pass1','=','1')
             ->where('Tag3','=','1')
             ->get();
         return $row;
@@ -109,8 +106,8 @@ class  Cxbjl extends Model{
         return $bool;
     }
     public static function nopass($order,$advice){
-        $bool=DB::update('update main set State = ?,Pass3 = ?,Advice3 = ?,Tag3 = ? where Order1 = ?',
-            ['未通过',0,$advice,1,$order]);
+        $bool=DB::update('update main set State = ?,Pass3 = ?,Advice3 = ?,Tag3 = ?,Reject3 = ? where Order1 = ?',
+            ['未通过',0,$advice,1,null,$order]);
         return $bool;
     }
 

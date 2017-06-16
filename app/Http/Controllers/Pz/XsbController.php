@@ -79,7 +79,7 @@ class XsbController extends Controller{
                 "</script>";
             exit();
         }
-        $row=Xsb::searchx(null);  //查询未审核
+        $row=Xsb::searchx();  //查询未审核
         return view('Pz.xsb.searchx',compact('row'));
     }
     //已审加载页面时同步显示数据
@@ -92,7 +92,7 @@ class XsbController extends Controller{
                 "</script>";
             exit();
         }
-        $row=Xsb::searchy(null);  //查询已审核
+        $row=Xsb::searchy();  //查询已审核
         return view('Pz.xsb.searchy',compact('row'));
     }
     public function detailx($order,Request $request){
@@ -229,14 +229,14 @@ class XsbController extends Controller{
         if($checkpass=="提交") {
             if (Xsb::backreject($s,$advice,$order)) {
                 echo "<script>alert('审批成功');</script>";
-                return $this->searchx($request);  //查询未审核
+                return $this->rejected($request);  //查询修改意见未审核
             } else {
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }
         }else if($checkpass=="不通过"){
             if(Xsb::nopass($order,$advice)){
                 echo "<script>alert('审批成功');</script>";
-                return $this->searchx($request);  //查询未审核
+                return $this->rejected($request);  //查询修改意见未审核
             } else {
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }

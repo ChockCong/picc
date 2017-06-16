@@ -21,7 +21,7 @@
     </script>
 </head>
 <div class="panel panel-default" style="">
-    <div class="panel-heading">驳回表单</div>
+    <div class="panel-heading">意见修改表单</div>
     <div class="panel-body" style="font-size:110%">
         <form method="post" action="{{url('cwzxzralterrejected')}}" role="form" enctype="multipart/form-data">
             <input type= "hidden"   name="_token" value="{{ csrf_token() }}">
@@ -78,6 +78,11 @@
                 </tr>
                 <tr style="text-align: left">
                     <td colspan="4">
+                        销售部经理：{{$row->Advice7}}
+                    </td>
+                </tr>
+                <tr style="text-align: left">
+                    <td colspan="4">
                         车险部经理：{{$row->Advice3}}
                     </td>
                 </tr>
@@ -103,7 +108,7 @@
                 </tbody>
             </table>
 
-            返回上级：<input type="text" readonly name="rejectcom" value="{{$row->Reject4}}">
+            提交上级：<input type="text" readonly name="rejectcom" value="{{$row->Reject4}}">
             <input type="submit" name="pass" value="提交">
             <input type="submit" name="pass" value="不通过" >
         </form>

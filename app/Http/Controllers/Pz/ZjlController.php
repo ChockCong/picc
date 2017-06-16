@@ -207,9 +207,6 @@ class ZjlController extends Controller{
                 "</script>";
             exit();
         }
-//        $all=$request->all();
-//        $advice=$all['Advice'];
-//        $com=$all['rejectcom'];
-//        dd($all);
+
     }
 }

@@ -109,8 +109,8 @@ class  Xsbjl extends Model{
         return $bool;
     }
     public static function nopass($order,$advice){
-        $bool=DB::update('update main set State = ?,Pass7 = ?,Advice7 = ?,Tag7 = ? where Order1 = ?',
-            ['未通过',0,$advice,1,$order]);
+        $bool=DB::update('update main set State = ?,Pass7 = ?,Advice7 = ?,Tag7 = ?,Reject7 = ? where Order1 = ?',
+            ['未通过',0,$advice,1,null,$order]);
         return $bool;
     }
 

@@ -78,6 +78,11 @@
                 </tr>
                 <tr style="text-align: left">
                     <td colspan="4">
+                        销售部经理：{{$row->Advice7}}
+                    </td>
+                </tr>
+                <tr style="text-align: left">
+                    <td colspan="4">
                         车险部经理：{{$row->Advice3}}
                     </td>
                 </tr>

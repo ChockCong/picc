@@ -81,17 +81,17 @@ $week=get_week($time1);
                     <li>
                 </ul>
             </div>
-            <div class="sBox">
-                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">特殊流程</span></div>
-                <ul class="navContent" style="display:block">
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>
-                        <a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊未审批</span></a> </li>
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>
-                        <a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊已审批</span></a> </li>
-                </ul>
-            </div>
+            {{--<div class="sBox">--}}
+                {{--<div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">特殊流程</span></div>--}}
+                {{--<ul class="navContent" style="display:block">--}}
+                    {{--<li>--}}
+                        {{--<div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>--}}
+                        {{--<a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊未审批</span></a> </li>--}}
+                    {{--<li>--}}
+                        {{--<div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>--}}
+                        {{--<a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊已审批</span></a> </li>--}}
+                {{--</ul>--}}
+            {{--</div>--}}
         </div>
     </div>
 

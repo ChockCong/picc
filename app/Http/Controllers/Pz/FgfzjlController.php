@@ -229,14 +229,14 @@ class FgfzjlController extends Controller{
         if($checkpass=="提交") {
             if (Fgfzjl::backreject($s,$advice,$order)) {
                 echo "<script>alert('审批成功');</script>";
-                return $this->searchx($request);  //查询未审核
+                return $this->rejected($request); //查询未审核
             } else {
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }
         }else if($checkpass=="不通过"){
             if(Fgfzjl::nopass($order,$advice)){
                 echo "<script>alert('审批成功');</script>";
-                return $this->searchx($request);  //查询未审核
+                return $this->rejected($request);  //查询未审核
             } else {
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }

@@ -85,6 +85,11 @@
                 </tr>
                 <tr style="text-align: left">
                     <td colspan="4">
+                        销售部经理：{{$row->Advice7}}
+                    </td>
+                </tr>
+                <tr style="text-align: left">
+                    <td colspan="4">
                         车险部经理：{{$row->Advice3}}
                     </td>
                 </tr>
@@ -108,6 +113,7 @@
             <option value ="">请选择驳回部门</option>
             <option value ="经营单位经理岗">经营单位经理岗</option>
             <option value ="销售部综合岗">销售部综合岗</option>
+                <option value="销售部经理">销售部经理</option>
             <option value="车险部经理">车险部经理</option>
             <option value="财务中心主任">财务中心主任</option>
             <option value="分管副总经理">分管副总经理</option>

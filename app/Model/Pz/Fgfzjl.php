@@ -97,8 +97,8 @@ class  Fgfzjl extends Model{
         return $bool;
     }
     public static function nopass($order,$advice){
-        $bool=DB::update('update main set State = ?,Pass5 = ?,Advice5 = ?,Tag5 = ? where Order1 = ?',
-            ['未通过',0,$advice,1,$order]);
+        $bool=DB::update('update main set State = ?,Pass5 = ?,Advice5 = ?,Tag5 = ?,Reject5 = ? where Order1 = ?',
+            ['未通过',0,$advice,1,null,$order]);
         return $bool;
     }
 

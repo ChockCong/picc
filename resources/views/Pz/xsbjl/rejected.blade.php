@@ -37,7 +37,7 @@
     </script>
 </head>
 <div class="panel panel-default">
-    <div class="panel-heading">驳回工单查询</div>
+    <div class="panel-heading">意见修改工单查询</div>
     <div class="panel-body" style="font-size:110%">
         <form method="post" action="{{url('')}}">
             <input type= "hidden"   name="_token" value="{{ csrf_token() }}">
@@ -49,14 +49,14 @@
             <input type="submit" name="" value="查询">
         </form>
     </div>
-    <div class="panel-heading">驳回表单</div>
+    <div class="panel-heading">意见修改表单</div>
     <div class="panel-body" style="font-size:110%;overflow-y:scroll;" >
         <table class="table table-striped table-responsive table-hover">
             <thead>
             <tr>
                 <th>工单编号</th>
                 <th>标题</th>
-                <th>机构</th>
+                <th>公司名称</th>
                 <th>申报人</th>
                 <th>发起日期</th>
                 <th>申报金额</th>

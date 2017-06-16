@@ -2,8 +2,7 @@
 namespace App\Model\Pz;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\DB;
-use PhpParser\Node\Expr\Empty_;
-use Illuminate\Support\Facades\Storage;
+
 
 
 class  Cwzxzr extends Model{
@@ -33,7 +32,6 @@ class  Cwzxzr extends Model{
         $d = $conmessage['Date1'];
         $o = $conmessage['Order1'];
         $e = $conmessage['Date2'];
-//        dd($com);
         if (!Empty($d) && !Empty($o) && !Empty($e)) {
             $row = DB::table('main')
                 ->where('Order1', '=', $o)
@@ -97,8 +95,8 @@ class  Cwzxzr extends Model{
         return $bool;
     }
     public static function nopass($order,$advice){
-        $bool=DB::update('update main set State = ?,Pass4 = ?,Advice4 = ?,Tag4 = ? where Order1 = ?',
-            ['未通过',0,$advice,1,$order]);
+        $bool=DB::update('update main set State = ?,Pass4 = ?,Advice4 = ?,Tag4 = ?,Reject4 = ? where Order1 = ?',
+            ['未通过',0,$advice,1,null,$order]);
         return $bool;
     }
 

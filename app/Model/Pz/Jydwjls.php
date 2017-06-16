@@ -85,7 +85,6 @@ class  Jydwjls extends Model{
     public static function searchy($com){
         $row = DB::table('main')
             ->where('Order1','like',$com.'%')
-//            ->where('Pass1','=','1')
                 ->where('Tag1','=','1')
             ->get();
         return $row;
@@ -103,8 +102,8 @@ class  Jydwjls extends Model{
         return $bool;
     }
     public static function nopass($order,$advice){
-        $bool=DB::update('update main set State = ?,Pass1 = ?,Advice1 = ?,Tag1 = ? where Order1 = ?',
-            ['未通过',0,$advice,1,$order]);
+        $bool=DB::update('update main set State = ?,Pass1 = ?,Advice1 = ?,Tag1 = ?,Reject1 = ? where Order1 = ?',
+            ['未通过',0,$advice,1,null,$order]);
         return $bool;
     }
 

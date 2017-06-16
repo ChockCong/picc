@@ -56,7 +56,7 @@
             <tr>
                 <th>工单编号</th>
                 <th>工单标题</th>
-                <th>机构</th>
+                <th>公司名称</th>
                 <th>申报人</th>
                 <th>发起日期</th>
                 <th>申报金额</th>
@@ -97,7 +97,6 @@
                     }
                     ?>
 
-                    ?>
                     <tr>
                         <td>{{$val->Order1}}</td>
                         <td>{{$val->Title}}</td>

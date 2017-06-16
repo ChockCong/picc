@@ -80,7 +80,7 @@ class CxbjlController extends Controller{
                 "</script>";
             exit();
         }
-        $row=Cxbjl::searchx(null);  //查询未审核
+        $row=Cxbjl::searchx();  //查询未审核
         return view('Pz.cxbjl.searchx',compact('row'));
     }
     //已审加载页面时同步显示数据
@@ -93,7 +93,7 @@ class CxbjlController extends Controller{
                 "</script>";
             exit();
         }
-        $row=Cxbjl::searchy(null);  //查询已审核
+        $row=Cxbjl::searchy();  //查询已审核
         return view('Pz.cxbjl.searchy',compact('row'));
     }
     public function detailx($order,Request $request){
@@ -230,14 +230,14 @@ class CxbjlController extends Controller{
         if($checkpass=="提交") {
             if (Cxbjl::backreject($s,$advice,$order)) {
                 echo "<script>alert('审批成功');</script>";
-                return $this->searchx($request);  //查询未审核
+                return $this->rejected($request);  //查询未审核
             } else {
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }
         }else if($checkpass=="不通过"){
             if(Cxbjl::nopass($order,$advice)){
                 echo "<script>alert('审批成功');</script>";
-                return $this->searchx($request);  //查询未审核
+                return $this->rejected($request);  //查询未审核
             } else {
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }

@@ -21,14 +21,14 @@
     </script>
 </head>
 <div class="panel panel-default" style="">
-    <div class="panel-heading">修改表单</div>
+    <div class="panel-heading">驳回表单</div>
     <div class="panel-body" style="font-size:110%">
         <form method="post" action="{{ url('alterject') }}" role="form" enctype="multipart/form-data">
             <input type= "hidden"   name="_token" value="{{ csrf_token() }}">
             <table id="tab" class="table table-striped table-responsive table-hover" border="1" style="text-align:center">
                 <thead>
                 <tr>
-                    <td colspan="4"><h4>驳回审批单</h4></th>
+                    <td colspan="4"><h4>批增审批单</h4></th>
                 </tr>
                 </thead>
                 <tbody>
@@ -82,6 +82,11 @@
                 <tr style="text-align: left">
                     <td colspan="4">
                         销售部综合岗：{{$row->Advice2}}
+                    </td>
+                </tr>
+                <tr style="text-align: left">
+                    <td colspan="4">
+                        销售部经理：{{$row->Advice7}}
                     </td>
                 </tr>
                 <tr style="text-align: left">

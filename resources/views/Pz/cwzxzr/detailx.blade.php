@@ -78,6 +78,11 @@
                 </tr>
                 <tr style="text-align: left">
                     <td colspan="4">
+                        销售部经理：{{$row->Advice7}}
+                    </td>
+                </tr>
+                <tr style="text-align: left">
+                    <td colspan="4">
                         车险部经理：{{$row->Advice3}}
                     </td>
                 </tr>
@@ -88,9 +93,10 @@
                 </tbody>
             </table>
             <select name="select">
-            <option value ="">请选择驳回部门</option>
+            <option value ="">请选择返回部门</option>
             <option value ="经营单位经理岗">经营单位经理岗</option>
             <option value ="销售部综合岗">销售部综合岗</option>
+                <option value ="销售部经理">销售部经理</option>
             <option value="车险部经理">车险部经理</option>
             </select>
             <input type="submit" name="pass" value="返回">
