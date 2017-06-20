@@ -110,7 +110,7 @@
 
             提交上级：<input type="text" readonly name="rejectcom" value="{{$row->Reject1}}">
             <input type="submit" name="pass" value="提交">
-            <input type="submit" name="pass" value="不通过" style="float: right">
+            <input type="submit" name="pass" value="不通过">
         </form>
     </div>
 </div>

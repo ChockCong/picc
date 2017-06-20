@@ -81,6 +81,8 @@
                         $j='分管副总经理';
                     }elseif($val->Pass6=='1'){
                         $j='总经理';
+                    }elseif($val->Pass7=='1'){
+                        $j='销售部经理';
                     }elseif(!empty($val->Reject1)){
                         $j='经营单位经理岗';
                     }elseif(!empty($val->Reject2)){
@@ -91,6 +93,8 @@
                         $j='财务中心主任';
                     }elseif(!empty($val->Reject5)){
                         $j='分管副总经理';
+                    }elseif(!empty($val->Reject7)){
+                        $j='销售部经理';
                     }else{
                         $j=$val->State;
                     }

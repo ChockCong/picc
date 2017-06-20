@@ -147,8 +147,15 @@ class XsbController extends Controller{
         }elseif($select=='分管副总经理'){
             $s='Reject5';
         }
-        if($checkpass=="通过") {
-            if (Xsb::pass($order,$advice)) {
+        if($checkpass=="通过到车险部经理") {
+            if (Xsb::pass1($order,$advice)) {
+                echo "<script>alert('审批成功');</script>";
+                return $this->searchx($request);  //查询未审核
+            } else {
+                echo "<script>alert('审批失败');history.go(-1);</script>";
+            }
+        }else if($checkpass=="通过到销售部经理"){
+            if (Xsb::pass2($order,$advice)) {
                 echo "<script>alert('审批成功');</script>";
                 return $this->searchx($request);  //查询未审核
             } else {
@@ -162,7 +169,7 @@ class XsbController extends Controller{
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }
 
-        }else if($checkpass=="驳回") {
+        }else if($checkpass=="返回") {
             if (Xsb::reject($order, $s, $i, $advice)) {
                 echo "<script>alert('审批成功');</script>";
                 return $this->searchx($request);  //查询未审核

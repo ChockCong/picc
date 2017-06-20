@@ -100,8 +100,15 @@ class  Xsb extends Model{
         return $row;
     }
 
-    public static function pass($order,$advice){
+    //到车险部经理
+    public static function pass1($order,$advice){
         $bool=DB::update('update main set Pass2 = ?,Pass3 = ?,Tag2 = ?,Advice2 = ?  where Order1 = ?',
+            [0,1,1,$advice,$order]);
+        return $bool;
+    }
+    //到销售部经理
+    public static function pass2($order,$advice){
+        $bool=DB::update('update main set Pass2 = ?,Pass7 = ?,Tag2 = ?,Advice2 = ?  where Order1 = ?',
             [0,1,1,$advice,$order]);
         return $bool;
     }

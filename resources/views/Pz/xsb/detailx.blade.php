@@ -87,7 +87,7 @@
                 <option value ="经营单位经理岗">经营单位经理岗</option>
             </select>
             <input type="submit" name="pass" value="返回">
-            <input type="submit" name="pass" value="通过">
+            <input type="submit" name="pass" value="通过到销售部经理" />&nbsp;<input type="submit" name="pass" value="通过到车险部经理" />
             <input type="submit" name="pass" value="不通过">
         </form>
     </div>

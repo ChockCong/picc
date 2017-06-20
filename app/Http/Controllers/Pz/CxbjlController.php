@@ -163,7 +163,7 @@ class CxbjlController extends Controller{
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }
 
-        }else if($checkpass=="驳回") {
+        }else if($checkpass=="返回") {
             if (Cxbjl::reject($order, $s, $i, $advice)) {
                 echo "<script>alert('审批成功');</script>";
                 return $this->searchx($request);  //查询未审核

@@ -186,7 +186,7 @@ class CwzxzrController extends Controller{
             } else {
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }
-        }elseif($checkpass=="驳回") {
+        }elseif($checkpass=="返回") {
             if(Cwzxzr::reject($order,$s,$i,$advice)){
                 echo "<script>alert('审批成功');</script>";
                 return $this->searchx($request);  //查询未审核

@@ -79,7 +79,7 @@ class XsbjlController extends Controller{
                 "</script>";
             exit();
         }
-        $row=Xsbjl::searchx();  //查询未审核
+        $row=Xsbjl::searchx(null);  //查询未审核
         return view('Pz.xsbjl.searchx',compact('row'));
     }
     //已审加载页面时同步显示数据
@@ -92,7 +92,7 @@ class XsbjlController extends Controller{
                 "</script>";
             exit();
         }
-        $row=Xsbjl::searchy();  //查询已审核
+        $row=Xsbjl::searchy(null);  //查询已审核
         return view('Pz.xsbjl.searchy',compact('row'));
     }
     public function detailx($order,Request $request){
@@ -164,7 +164,7 @@ class XsbjlController extends Controller{
                 echo "<script>alert('审批失败');history.go(-1);</script>";
             }
 
-        }else if($checkpass=="驳回") {
+        }else if($checkpass=="返回") {
             if (Xsbjl::reject($order, $s, $i, $advice)) {
                 echo "<script>alert('审批成功');</script>";
                 return $this->searchx($request);  //查询未审核
