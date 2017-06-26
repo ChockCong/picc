@@ -130,23 +130,12 @@ class XsbController extends Controller{
                 "</script>";
             exit();
         }
+        $i='销售部综合岗';
         $all=$request->all();
         $order=$all['Order1'];
         $advice=$all['Advice'];
         $checkpass=$all['pass'];
-        $select=$all['select'];
-        $i='销售部综合岗';
-        if($select=='经营单位经理岗'){
-            $s='Reject1';
-        }elseif($select=='销售部综合岗'){
-            $s='Reject2';
-        }elseif($select=='车险部经理'){
-            $s='Reject3';
-        } elseif($select=='财务中心主任'){
-            $s='Reject4';
-        }elseif($select=='分管副总经理'){
-            $s='Reject5';
-        }
+
         if($checkpass=="通过到车险部经理") {
             if (Xsb::pass1($order,$advice)) {
                 echo "<script>alert('审批成功');</script>";
@@ -170,6 +159,22 @@ class XsbController extends Controller{
             }
 
         }else if($checkpass=="返回") {
+            $select=$all['select'];
+            if($select==null){
+                echo "<script>alert('请选择返回部门');history.go(-1);</script>";
+                exit();
+            }
+            elseif($select=='经营单位经理岗'){
+                $s='Reject1';
+            }elseif($select=='销售部综合岗'){
+                $s='Reject2';
+            }elseif($select=='车险部经理'){
+                $s='Reject3';
+            } elseif($select=='财务中心主任'){
+                $s='Reject4';
+            }elseif($select=='分管副总经理'){
+                $s='Reject5';
+            }
             if (Xsb::reject($order, $s, $i, $advice)) {
                 echo "<script>alert('审批成功');</script>";
                 return $this->searchx($request);  //查询未审核
