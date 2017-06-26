@@ -18,9 +18,6 @@ class JydwjlsController extends Controller{
             return redirect()->action('LoginController@login');
 
     }
-    public function sp(){
-        return view('Pz.jydwjls.sp');
-    }
     //未审核查询动作返回数据
     public function consearch(Request $request){
         $user=$request->session()->get('user');

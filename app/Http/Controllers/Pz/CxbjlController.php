@@ -15,9 +15,7 @@ class CxbjlController extends Controller{
             return view('Pz.cxbjl.Main');
         else
             return redirect()->action('LoginController@login');
-    }
-    public function sp(){
-        return view('Pz.cxbjl.sp');
+
     }
     //未审核查询动作返回数据
     public function consearch(Request $request){
