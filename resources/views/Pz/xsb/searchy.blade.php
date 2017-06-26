@@ -96,6 +96,7 @@
                     }elseif(!empty($val->Reject7)){
                         $j='销售部经理';
                     }else{
+
                         $j=$val->State;
                     }
                     ?>

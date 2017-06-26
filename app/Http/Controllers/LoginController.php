@@ -42,12 +42,10 @@ class LoginController extends Controller{
             }
             if ($d == '经营单位经理室') {
                 return redirect()->action('Pz\JydwjlsController@main');
-
             }
             if ($d == '销售部综合岗') {
                 return redirect()->action('Pz\XsbController@main');
             }
-
             if ($d == '车险部经理') {
                 return redirect()->action('Pz\CxbjlController@main');
             }

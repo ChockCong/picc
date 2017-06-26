@@ -53,7 +53,7 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('xsbsearchx','Pz\XsbController@searchx');
     Route::any('xsbsearchy','Pz\XsbController@searchy');
     Route::any('xsbconsearch','Pz\XsbController@consearch');
-    Route::any('xsbconsearched','Pz\XsbController@consearched');
+    Route::any('xsbconsearched',' Pz\XsbController@consearched');
     Route::any('xsbdetailx/{order}','Pz\XsbController@detailx');
     Route::any('xsbdetaily/{order}','Pz\XsbController@detaily');
     Route::any('xsbpass','Pz\XsbController@pass');

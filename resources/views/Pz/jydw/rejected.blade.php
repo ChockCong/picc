@@ -64,6 +64,8 @@ $i=Session::get('user');
                     $j='销售部综合岗';
                 }elseif($val->Pass3=='1'){
                     $j='车险部经理';
+                }elseif($val->Pass7=='1'){
+                    $j='销售部经理';
                 }elseif($val->Pass4=='1'){
                     $j='财务中心主任';
                 }elseif($val->Pass5=='1'){
@@ -80,6 +82,8 @@ $i=Session::get('user');
                     $j='财务中心主任';
                 }elseif(!empty($val->Reject5)){
                     $j='分管副总经理';
+                }elseif(!empty($val->Reject7)){
+                    $j='销售部经理';
                 }else{
                     $j=$val->State;
                 }
