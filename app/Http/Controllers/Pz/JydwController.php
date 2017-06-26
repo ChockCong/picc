@@ -34,6 +34,9 @@ class JydwController extends Controller {
             return redirect()->action('LoginController@login');
 
     }
+    public function sp(){
+        return view('Pz.jydw.sp');
+    }
     public function logo(Request $request){
             return view('Pz.jydw.logo');
 

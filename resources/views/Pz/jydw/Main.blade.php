@@ -29,7 +29,7 @@ $week=get_week($time1);
         <a href="{{url('jydwmain')}}"><div class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></div></a></div>
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="li-border"><a class="mystyle-color" href="#">流程审批</a></li>
+            <li class="li-border"><a class="mystyle-color" href="{{url('jydwsp')}}">流程审批</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">业务查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">销售佣金查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">奖励佣金查询</a></li>
@@ -64,27 +64,6 @@ $week=get_week($time1);
     </div>
 </nav>
 
-<div class="down-main">
-    <div class="left-main left-full">
-        <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
-        <div class="subNavBox">
-            <div class="sBox">
-                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">批增流程</span></div>
-                <ul class="navContent" style="display:block">
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增流程</div>
-                        <a href="{{url('jydw')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增申报</span></a> </li>
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />项目查询</div>
-                        <a href="{{url('jydwsearchall')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-envelope"></span><span class="sub-title">项目查询</span></a> </li>
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />驳回修改</div>
-                        <a href="{{url('rejected')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-bullhorn"></span><span class="sub-title">驳回修改</span></a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
 
     <div class="right-product my-index right-full">
         <div class="container-fluid">

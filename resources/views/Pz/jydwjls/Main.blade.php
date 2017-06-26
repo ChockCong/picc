@@ -29,7 +29,7 @@ $week=get_week($time1);
         <a href="{{url('jydwjlsmain')}}"><div class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></div></a></div>
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="li-border"><a class="mystyle-color" href="#">流程审批</a></li>
+            <li class="li-border"><a class="mystyle-color" href="{{url('jydwjlssp')}}">流程审批</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">业务查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">销售佣金查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">奖励佣金查询</a></li>
@@ -63,37 +63,6 @@ $week=get_week($time1);
     </div>
 </nav>
 
-<div class="down-main">
-    <div class="left-main left-full">
-        <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
-        <div class="subNavBox">
-            <div class="sBox">
-                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">批增流程</span></div>
-                <ul class="navContent" style="display:block">
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>
-                        <a href="{{url('jydwjlssearchx')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增未审批</span></a> </li>
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>
-                        <a href="{{url('jydwjlssearchy')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增已审批</span></a> </li>
-                    <li>
-                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />意见修改</div>
-                        <a href="{{url('jydwjlsrejected')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">意见修改</span></a> </li>
-                </ul>
-            </div>
-            {{--<div class="sBox">--}}
-                {{--<div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">特殊流程</span></div>--}}
-                {{--<ul class="navContent" style="display:block">--}}
-                    {{--<li>--}}
-                        {{--<div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>--}}
-                        {{--<a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊未审批</span></a> </li>--}}
-                    {{--<li>--}}
-                        {{--<div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>--}}
-                        {{--<a href="" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">特殊已审批</span></a> </li>--}}
-                {{--</ul>--}}
-            {{--</div>--}}
-        </div>
-    </div>
 
     <div class="right-product my-index right-full">
         <div class="container-fluid">
