@@ -15,9 +15,7 @@ class CwzxzrController extends Controller{
             return view('Pz.cwzxzr.Main');
         else
             return redirect()->action('LoginController@login');
-    }
-    public function sp(){
-        return view('Pz.cwzxzr.sp');
+
     }
     //未审加载页面时同步显示数据
     public function searchx(Request $request){
