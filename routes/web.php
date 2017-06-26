@@ -130,6 +130,10 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('zjlconsearched','Pz\ZjlController@consearched');
     Route::any('zjldetaily/{order}','Pz\ZjlController@detaily');
     Route::any('zjlpass','Pz\ZjlController@pass');
+    //奖励佣金导入
+
+
+
     //奖励佣金查询
     //Route::any('jlyjcx','Pz\ZjlController@pass');
 });

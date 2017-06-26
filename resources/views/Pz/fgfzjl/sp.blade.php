@@ -4,7 +4,7 @@ $i=Session::get('user');
 $time1=date("Y年m月d日");
 $week=get_week($time1);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -12,6 +12,9 @@ $week=get_week($time1);
     <title>PICC</title>
     <link href="bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
     <link title="" href="css/style.css" rel="stylesheet" type="text/css"  />
+    {{--<link title="blue" href="{{asset('/css/dermadefault.css')}}" rel="stylesheet" type="text/css" disabled="disabled"/>--}}
+    {{--<link title="green" href="{{asset('/css/dermagreen.css')}}" rel="stylesheet" type="text/css" disabled="disabled"/>--}}
+    {{--<link title="orange" href="{{asset('/css/dermaorange.css')}}" rel="stylesheet" type="text/css" disabled="disabled"/>--}}
     <link title="black" href="css/dermablack.css" rel="stylesheet" type="text/css"/>
     <link href="css/templatecss.css" rel="stylesheet" title="" type="text/css" />
     <script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
@@ -26,13 +29,12 @@ $week=get_week($time1);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="{{url('xsbmain')}}"><div class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></div></a></div>
+        <a href="{{url('fgfzjlmain')}}"><div class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></div></a></div>
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="li-border"><a class="mystyle-color" href="{{url('xsbsp')}}">流程审批</a></li>
+            <li class="li-border"><a class="mystyle-color" href="{{url('fgfzjlsp')}}">流程审批</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">业务查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">销售佣金查询</a></li>
-            <li class="li-border"><a class="mystyle-color" href="#">销售佣金导入</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">奖励佣金查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">销售人员信息管理</a></li>
             <!----下拉框选项---->
@@ -66,7 +68,26 @@ $week=get_week($time1);
     </div>
 </nav>
 
-
+<div class="down-main">
+    <div class="left-main left-full">
+        <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+        <div class="subNavBox">
+            <div class="sBox">
+                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">批增流程</span></div>
+                <ul class="navContent" style="display:block">
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>
+                        <a href="{{url('fgfzjlsearchx')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增未审批</span></a> </li>
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>
+                        <a href="{{url('fgfzjlsearchy')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增已审批</span></a> </li>
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />意见修改</div>
+                        <a href="{{url('fgfzjlrejected')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">意见修改</span></a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <div class="right-product my-index right-full">
         <div class="container-fluid">

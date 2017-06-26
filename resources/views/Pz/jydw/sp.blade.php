@@ -4,7 +4,7 @@ $i=Session::get('user');
 $time1=date("Y年m月d日");
 $week=get_week($time1);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -26,20 +26,18 @@ $week=get_week($time1);
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="{{url('xsbmain')}}"><div class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></div></a></div>
+        <a href="{{url('jydwmain')}}"><div class="navbar-brand mystyle-brand"><span class="glyphicon glyphicon-home"></span></div></a></div>
     <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
-            <li class="li-border"><a class="mystyle-color" href="{{url('xsbsp')}}">流程审批</a></li>
+            <li class="li-border"><a class="mystyle-color" href="{{url('jydwsp')}}">流程审批</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">业务查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">销售佣金查询</a></li>
-            <li class="li-border"><a class="mystyle-color" href="#">销售佣金导入</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">奖励佣金查询</a></li>
             <li class="li-border"><a class="mystyle-color" href="#">销售人员信息管理</a></li>
             <!----下拉框选项---->
         </ul>
 
         <ul class="nav navbar-nav pull-right">
-
             <li class="li-border">
                 <a class="mystyle-color">
                     {{$time1}}
@@ -66,13 +64,35 @@ $week=get_week($time1);
     </div>
 </nav>
 
+<div class="down-main">
+    <div class="left-main left-full">
+        <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+        <div class="subNavBox">
+            <div class="sBox">
+                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">批增流程</span></div>
+                <ul class="navContent" style="display:block">
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增流程</div>
+                        <a href="{{url('jydw')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增申报</span></a> </li>
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />项目查询</div>
+                        <a href="{{url('jydwsearchall')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-envelope"></span><span class="sub-title">项目查询</span></a> </li>
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />驳回修改</div>
+                        <a href="{{url('rejected')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-bullhorn"></span><span class="sub-title">驳回修改</span></a></li>
+                </ul>
+            </div>
 
+        </div>
+    </div>
 
     <div class="right-product my-index right-full">
         <div class="container-fluid">
             <div class="info-center">
+
                 <!---title----->
                 <div class="info-title">
+
                 </div>
                 <div class="clearfix"></div>
             </div>

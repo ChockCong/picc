@@ -4,7 +4,7 @@ $i=Session::get('user');
 $time1=date("Y年m月d日");
 $week=get_week($time1);
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -66,7 +66,26 @@ $week=get_week($time1);
     </div>
 </nav>
 
-
+<div class="down-main">
+    <div class="left-main left-full">
+        <div class="sidebar-fold"><span class="glyphicon glyphicon-menu-hamburger"></span></div>
+        <div class="subNavBox">
+            <div class="sBox">
+                <div class="subNav sublist-down"><span class="title-icon glyphicon glyphicon-chevron-down"></span><span class="sublist-title">批增流程</span></div>
+                <ul class="navContent" style="display:block">
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增未审批</div>
+                        <a href="{{url('xsbsearchx')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增未审批</span></a> </li>
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />批增已审批</div>
+                        <a href="{{url('xsbsearchy')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">批增已审批</span></a> </li>
+                    <li>
+                        <div class="showtitle" style="width:100px;"><img src="img/leftimg.png" />意见修改</div>
+                        <a href="{{url('xsbrejected')}}" target="Center"><span class="sublist-icon glyphicon glyphicon-credit-card"></span><span class="sub-title">意见修改</span></a> </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <div class="right-product my-index right-full">
         <div class="container-fluid">
