@@ -16,7 +16,9 @@ class FgfzjlController extends Controller{
             return view('Pz.fgfzjl.Main');
         else
             return redirect()->action('LoginController@login');
-
+    }
+    public function sp(){
+        return view('Pz.fgfzjl.sp');
     }
     //未审加载页面时同步显示数据
     public function searchx(Request $request){

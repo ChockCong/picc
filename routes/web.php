@@ -23,6 +23,7 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('loginout', 'LoginoutController@loginout');
     Route::any('check', 'LoginController@check');
     //经营单位
+    Route::any('jydwsp', 'Pz\JydwController@sp');
     Route::any('jydwmain', 'Pz\JydwController@main');
     Route::any('logo', 'Pz\JydwController@logo');
     Route::any('jydw', 'Pz\JydwController@show');
@@ -36,7 +37,9 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('alterject','Pz\JydwController@alterject');
     Route::any('downloadfile/{filename}/{name}','Pz\JydwController@downloadfile');
     //经营单位经理室
+
     Route::any('jydwjlsmain','Pz\JydwjlsController@main');
+    Route::any('jydwjlssp','Pz\JydwjlsController@sp');
     Route::any('jydwjlssearchx','Pz\JydwjlsController@searchx');
     Route::any('jydwjlssearchy','Pz\JydwjlsController@searchy');
     Route::any('jydwjlsdetailx/{order}','Pz\JydwjlsController@detailx');
@@ -50,6 +53,7 @@ Route::group(['middleware'=>['web']],function (){
 
     //销售部综合岗
     Route::any('xsbmain','Pz\XsbController@main');
+    Route::any('xsbsp','Pz\XsbController@sp');
     Route::any('xsbsearchx','Pz\XsbController@searchx');
     Route::any('xsbsearchy','Pz\XsbController@searchy');
     Route::any('xsbconsearch','Pz\XsbController@consearch');
@@ -63,6 +67,7 @@ Route::group(['middleware'=>['web']],function (){
 
     //销售部经理
     Route::any('xsbjlmain','Pz\XsbjlController@main');
+    Route::any('xsbjlsp','Pz\XsbjlController@sp');
     Route::any('xsbjlsearchx','Pz\XsbjlController@searchx');
     Route::any('xsbjlsearchy','Pz\XsbjlController@searchy');
     Route::any('xsbjlconsearch','Pz\XsbjlController@consearch');
@@ -76,6 +81,7 @@ Route::group(['middleware'=>['web']],function (){
 
     //车险部经理
     Route::any('cxbjlmain','Pz\CxbjlController@main');
+    Route::any('cxbjlsp','Pz\CxbjlController@sp');
     Route::any('cxbjlsearchx','Pz\CxbjlController@searchx');
     Route::any('cxbjlsearchy','Pz\CxbjlController@searchy');
     Route::any('cxbjlconsearch','Pz\CxbjlController@consearch');
@@ -89,6 +95,7 @@ Route::group(['middleware'=>['web']],function (){
 
     //财务中心主任
     Route::any('cwzxzrmain','Pz\CwzxzrController@main');
+    Route::any('cwzxzrsp','Pz\CwzxzrController@sp');
     Route::any('cwzxzrsearchx','Pz\CwzxzrController@searchx');
     Route::any('cwzxzrdetailx/{order}','Pz\CwzxzrController@detailx');
     Route::any('cwzxzrsearchy','Pz\CwzxzrController@searchy');
@@ -102,6 +109,7 @@ Route::group(['middleware'=>['web']],function (){
 
     //分管副总经理
     Route::any('fgfzjlmain','Pz\FgfzjlController@main');
+    Route::any('fgfzjlsp','Pz\FgfzjlController@sp');
     Route::any('fgfzjlsearchx','Pz\FgfzjlController@searchx');
     Route::any('fgfzjldetailx/{order}','Pz\FgfzjlController@detailx');
     Route::any('fgfzjlsearchy','Pz\FgfzjlController@searchy');
@@ -114,6 +122,7 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('fgfzjlalterrejected','Pz\FgfzjlController@alterrejected');
     //总经理
     Route::any('zjlmain','Pz\ZjlController@main');
+    Route::any('zjlsp','Pz\ZjlController@sp');
     Route::any('zjlsearchx','Pz\ZjlController@searchx');
     Route::any('zjlsearchy','Pz\ZjlController@searchy');
     Route::any('zjlconsearch','Pz\ZjlController@consearch');
