@@ -131,10 +131,9 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('zjldetaily/{order}','Pz\ZjlController@detaily');
     Route::any('zjlpass','Pz\ZjlController@pass');
     //奖励佣金导入
-    Route::any('rewardim','RewardController@rshow');
-    Route::any('rewardimport','RewardController@rimport');
-    Route::any('rewardex','RewardController@eshow');
-    Route::any('rewardexport','RewardController@rexport');
+
+
+
     //奖励佣金查询
     //Route::any('jlyjcx','Pz\ZjlController@pass');
 });

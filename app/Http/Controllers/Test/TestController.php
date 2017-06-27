@@ -51,7 +51,6 @@ class TestController extends Controller
             $data = $reader->all();
 //            dd($data);
             $value=array(array('Com'=>0,'Gcode'=>0,'Eid'=>0,'Mem'=>0,'Jlj'=>0,'Grj'=>0));
-
             foreach($data as $i => $val){
                 if(count($val['机构名称'])!=0){
                     $value[$i]['Com']=$val['机构名称'];
@@ -61,10 +60,8 @@ class TestController extends Controller
                     $value[$i]['Jlj']=$val['经理奖'];
                     $value[$i]['Grj']=$val['个人奖'];
                 }
-//                echo $val['机构']." ".$val['团队']." ".$val['销售人员']." ".
-//                    $val['奖励名称']." ".$val['奖励金额']." ".$val['奖励时间']."<br />";
+
             }
-//            dd($value);
             $bool=Reward::insertexcel($value);//插入数据库
             if($bool){
                 echo 1;
