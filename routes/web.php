@@ -131,8 +131,7 @@ Route::group(['middleware'=>['web']],function (){
     Route::any('zjldetaily/{order}','Pz\ZjlController@detaily');
     Route::any('zjlpass','Pz\ZjlController@pass');
     //奖励佣金导入
-
-
+    Route::any('rewardim','RewardController@rimport');
 
     //奖励佣金查询
     //Route::any('jlyjcx','Pz\ZjlController@pass');
