@@ -17,6 +17,59 @@ $week=get_week($time1);
     <script src="script/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="script/jquery.cookie.js" type="text/javascript"></script>
     <script src="bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+    <style type="text/css">
+        @-webkit-keyframes run{
+            0%  {
+                -webkit-transform:rotateY(0deg);
+            }
+            100% {
+                -webkit-transform:rotateY(360deg);
+            }
+        }
+        @-moz-keyframes run{
+            0%  {
+                -moz-transform:rotateY(0deg);
+            }
+            100% {
+                -moz-transform:rotateY(360deg);
+            }
+        }
+        @keyframes run{
+            0%  {
+                transform:rotateY(0deg);
+            }
+            100% {
+                transform:rotateY(360deg);
+            }
+        }
+
+        img{
+            width:420px;height:200px;
+            margin:13% 0 30px 0;
+            background-size:cover;
+            -webkit-transform:translate3d(0,0,0);
+            -moz-transform:translate3d(0,0,0);
+            transform:translate3d(0,0,0);
+            -webkit-animation:run 8s linear infinite;
+            -moz-animation:run 8s linear infinite;
+            animation:run 8s linear infinite;
+            transition-delay: 10s;
+            -moz-transition-delay: 10s;
+            -webkit-transition-delay: 10s;
+            -o-transition-delay: 10s;
+        }
+        .china{
+            font-family:"隶书";
+            font-size: 48px;
+            font-weight:700;letter-spacing: 0px;
+        }
+        .English{
+            font-family: "Roboto", Helvetica, Arial, sans-serif;
+            font-size: 22px;
+            font-weight:700;letter-spacing: 1px;
+            margin-top: 0px;
+        }
+    </style>
 </head>
 <body bgcolor="orange" style="">
 <nav class="nav navbar-default navbar-mystyle navbar-fixed-top">
@@ -80,9 +133,22 @@ $week=get_week($time1);
                     <div class="table-margin" style="height: 500px">
 
                         <!--<table class="table table-bordered table-header">-->
-                        <iframe name="Center" src="{{url('logo')}}" style="border: 0;overflow-y: hidden" width="100%" height="600px">
+                        {{--<iframe name="Center" src="{{url('logo')}}" style="border: 0;overflow-y: hidden" width="100%" height="600px">--}}
+                        {{--</iframe>--}}
+                        <table border="0" style="text-align:center;margin:50px 0 0 -80px" width="100%">
+                            <tr>
+                                <td><a href="images/picc.png" target="_blank"><img clsaa="showlogo" src="images/picc.png"></a></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div style="width:100%;height:20%;">
+                                        <p class="china">中国人民财产保险股份有限公司</p>
+                                        <p class="English">PICC PROPERTY AND CASUALTY COMPANY LIMITED</p>
+                                    </div>
+                                </td>
 
-                        </iframe>
+                            </tr>
+                        </table>
                     </div>
                 </div>
             </div>
