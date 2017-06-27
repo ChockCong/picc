@@ -115,7 +115,8 @@ $week=get_week($time1);
                         <div class="panel-body" style="font-size:110%">
                             <table class="table table-striped table-responsive table-hover">
                                 <tbody>
-                                <form method="post" action="">
+                                <form method="post" action="{{url('rewardimport')}}">
+                                    <input type= "hidden"   name="_token" value="{{ csrf_token() }}">
                                 {{--<tr>--}}
                                 {{--<td>账号</td>--}}
                                 {{--<td>{{$i->Account}}</td>--}}
